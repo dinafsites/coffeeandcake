@@ -3,136 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coffee & Cake | Bakı</title>
+
+<title>Coffee & Cake | Premium Kafe Bakı</title>
+<meta name="description" content="Coffee & Cake — Sabunçuda premium kafe. Qəhvə, desert, limonad və rahat atmosfer. WhatsApp ilə sifariş.">
+<meta name="keywords" content="Coffee & Cake, kafe Sabunçu, qəhvə Bakı, desert Bakı, cafe Baku">
+<meta name="author" content="Coffee & Cake">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body{
-margin:0;
-font-family:Poppins, sans-serif;
-background:#0f0f0f;
-color:#fff;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:#000;
-position:sticky;
-top:0;
-z-index:10;
-}
-
-header img{
-height:50px;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:25px;
-font-size:15px;
-opacity:.8;
-}
-
+body{margin:0;font-family:Poppins,sans-serif;background:#0f0f0f;color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#000;position:sticky;top:0;z-index:10}
+header img{height:50px}
+nav a{color:#fff;text-decoration:none;margin-left:25px;font-size:15px;opacity:.85}
 nav a:hover{opacity:1}
-
-.hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:48px;
-margin:0;
-}
-
-.hero p{
-opacity:.8;
-margin:15px 0 25px;
-}
-
-.btn{
-background:#c59d5f;
-color:#000;
-padding:14px 28px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-}
-
-.section{
-padding:70px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
-}
-
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-}
-
-.menu-card{
-background:#1a1a1a;
-padding:20px;
-border-radius:10px;
-}
-
-.menu-card h3{
-margin-top:0;
-border-bottom:1px solid #333;
-padding-bottom:10px;
-}
-
-.menu-item{
-display:flex;
-justify-content:space-between;
-padding:6px 0;
-font-size:14px;
-}
-
-.contact{
-text-align:center;
-}
-
-iframe{
-width:100%;
-height:350px;
-border:0;
-border-radius:10px;
-margin-top:25px;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#000;
-opacity:.7;
-font-size:14px;
-}
-
-@media(max-width:600px){
-.hero h1{font-size:32px}
-header{padding:15px 20px}
-}
+.hero{height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');background-size:cover;background-position:center}
+.hero h1{font-size:52px;margin:0}
+.hero p{opacity:.85;margin:15px 0 25px}
+.btn{background:#c59d5f;color:#000;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:600}
+.section{padding:80px 20px;max-width:1200px;margin:auto}
+.section h2{text-align:center;margin-bottom:50px;font-size:34px}
+.menu-category{margin-bottom:40px}
+.menu-category h3{border-bottom:2px solid #c59d5f;padding-bottom:8px}
+.menu-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #222;font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.gallery img{width:100%;border-radius:10px;height:220px;object-fit:cover}
+form{max-width:500px;margin:auto}
+input,textarea{width:100%;padding:12px;margin-bottom:12px;border-radius:6px;border:none}
+button{background:#c59d5f;border:none;padding:14px 25px;border-radius:6px;font-weight:600}
+iframe{width:100%;height:350px;border:0;border-radius:10px;margin-top:25px}
+footer{text-align:center;padding:35px;background:#000;opacity:.7;font-size:14px}
+@media(max-width:600px){.hero h1{font-size:34px}header{padding:15px 20px}}
 </style>
 </head>
 
@@ -142,6 +43,8 @@ header{padding:15px 20px}
 <img src="logo.png">
 <nav>
 <a href="#menu">Menyu</a>
+<a href="#gallery">Galereya</a>
+<a href="#reserve">Rezervasiya</a>
 <a href="#contact">Əlaqə</a>
 <a href="https://instagram.com/coffeeandcake._" target="_blank">Instagram</a>
 </nav>
@@ -149,24 +52,23 @@ header{padding:15px 20px}
 
 <section class="hero">
 <h1>Coffee & Cake</h1>
-<p>Premium kafe təcrübəsi – Sabunçu, Bakı</p>
+<p>Sabunçuda premium kafe təcrübəsi</p>
 <a class="btn" href="https://wa.me/994777117667">WhatsApp ilə sifariş</a>
 </section>
 
 <section id="menu" class="section">
-<h2>Seçilmiş Menyu</h2>
+<h2>Menyu</h2>
 
-<div class="menu-grid">
-
-<div class="menu-card">
+<div class="menu-category">
 <h3>Qəhvə</h3>
 <div class="menu-item"><span>Espresso</span><span>2.50 ₼</span></div>
+<div class="menu-item"><span>Americano</span><span>4.00 ₼</span></div>
 <div class="menu-item"><span>Cappuccino</span><span>4.50 ₼</span></div>
 <div class="menu-item"><span>Latte</span><span>4.60 ₼</span></div>
 <div class="menu-item"><span>Flat White</span><span>5.20 ₼</span></div>
 </div>
 
-<div class="menu-card">
+<div class="menu-category">
 <h3>Dessert</h3>
 <div class="menu-item"><span>San Sebastian</span><span>6.50 ₼</span></div>
 <div class="menu-item"><span>Tiramisu</span><span>6.70 ₼</span></div>
@@ -174,7 +76,7 @@ header{padding:15px 20px}
 <div class="menu-item"><span>Brownie</span><span>6.80 ₼</span></div>
 </div>
 
-<div class="menu-card">
+<div class="menu-category">
 <h3>Sərin İçkilər</h3>
 <div class="menu-item"><span>Ice Latte</span><span>5.00 ₼</span></div>
 <div class="menu-item"><span>Ice Mocha</span><span>5.80 ₼</span></div>
@@ -182,19 +84,36 @@ header{padding:15px 20px}
 <div class="menu-item"><span>Milkshake</span><span>6.50 ₼</span></div>
 </div>
 
+</section>
+
+<section id="gallery" class="section">
+<h2>Galereya</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
 </div>
 </section>
 
-<section id="contact" class="section contact">
+<section id="reserve" class="section">
+<h2>Rezervasiya</h2>
+<form action="https://formsubmit.co/coffeeandcake.az@gmail.com" method="POST">
+<input type="text" name="Ad" placeholder="Adınız" required>
+<input type="tel" name="Telefon" placeholder="Telefon" required>
+<input type="date" name="Tarix" required>
+<textarea name="Qeyd" placeholder="Qeyd"></textarea>
+<button type="submit">Rezervasiya göndər</button>
+</form>
+</section>
+
+<section id="contact" class="section">
 <h2>Əlaqə və Məkan</h2>
 <p>Sabunçu rayonu, Səmədbəy Mehmandarov küçəsi 30, Bakı</p>
 <p>Tel: +994 77 711 76 67</p>
 <p>Hər gün: 08:00 – 23:30</p>
 
-<iframe
-src="https://www.google.com/maps?q=40.419305,49.965651&output=embed">
-</iframe>
-
+<iframe src="https://www.google.com/maps?q=40.419305,49.965651&output=embed"></iframe>
 </section>
 
 <footer>
