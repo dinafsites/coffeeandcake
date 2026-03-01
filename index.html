@@ -3,37 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Coffee & Cake | Premium Kafe Bakı</title>
-<meta name="description" content="Coffee & Cake — Sabunçuda premium kafe. Qəhvə, desert, limonad və rahat atmosfer. WhatsApp ilə sifariş.">
-<meta name="keywords" content="Coffee & Cake, kafe Sabunçu, qəhvə Bakı, desert Bakı, cafe Baku">
-<meta name="author" content="Coffee & Cake">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Poppins,sans-serif;background:#0f0f0f;color:#fff}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#000;position:sticky;top:0;z-index:10}
-header img{height:50px}
-nav a{color:#fff;text-decoration:none;margin-left:25px;font-size:15px;opacity:.85}
+:root{
+--gold:#c6a46c;
+--dark:#0e0e0e;
+--card:#171717;
+}
+
+body{margin:0;font-family:Poppins;background:var(--dark);color:#fff}
+
+header{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 40px;background:rgba(0,0,0,.6);
+backdrop-filter:blur(6px);z-index:10}
+
+header img{height:52px}
+
+nav a{color:#fff;text-decoration:none;margin-left:28px;font-size:14px;opacity:.85}
 nav a:hover{opacity:1}
-.hero{height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');background-size:cover;background-position:center}
-.hero h1{font-size:52px;margin:0}
+
+.hero{
+height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;text-align:center;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
+url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085");
+background-size:cover;background-position:center}
+
+.hero h1{font-family:"Playfair Display";font-size:60px;margin:0}
 .hero p{opacity:.85;margin:15px 0 25px}
-.btn{background:#c59d5f;color:#000;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:600}
-.section{padding:80px 20px;max-width:1200px;margin:auto}
-.section h2{text-align:center;margin-bottom:50px;font-size:34px}
-.menu-category{margin-bottom:40px}
-.menu-category h3{border-bottom:2px solid #c59d5f;padding-bottom:8px}
-.menu-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #222;font-size:15px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.gallery img{width:100%;border-radius:10px;height:220px;object-fit:cover}
-form{max-width:500px;margin:auto}
-input,textarea{width:100%;padding:12px;margin-bottom:12px;border-radius:6px;border:none}
-button{background:#c59d5f;border:none;padding:14px 25px;border-radius:6px;font-weight:600}
-iframe{width:100%;height:350px;border:0;border-radius:10px;margin-top:25px}
-footer{text-align:center;padding:35px;background:#000;opacity:.7;font-size:14px}
-@media(max-width:600px){.hero h1{font-size:34px}header{padding:15px 20px}}
+.btn{background:var(--gold);color:#000;padding:14px 34px;border-radius:40px;text-decoration:none}
+
+.section{padding:110px 25px;max-width:1200px;margin:auto}
+.section-title{font-family:"Playfair Display";font-size:42px;text-align:center;margin-bottom:60px}
+
+.menu-category{
+background:var(--card);
+padding:28px;
+border-radius:16px;
+margin-bottom:30px;
+box-shadow:0 0 0 1px #222}
+
+.menu-category h3{
+font-family:"Playfair Display";
+border-bottom:1px solid #333;
+padding-bottom:8px;margin-top:0}
+
+.menu-item{
+display:flex;justify-content:space-between;
+padding:6px 0;font-size:14px}
+
+.gallery{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:12px}
+
+.reserve-box{
+background:var(--card);
+padding:35px;border-radius:16px;max-width:500px;margin:auto}
+
+.reserve-box input,
+.reserve-box textarea{
+width:100%;padding:12px;margin-bottom:12px;border:none;border-radius:6px}
+
+.reserve-box button{
+width:100%;background:var(--gold);border:none;padding:14px;border-radius:6px}
+
+.map{border-radius:16px;overflow:hidden;margin-top:30px}
+
+footer{text-align:center;padding:35px;background:#000;opacity:.7}
+
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:#fff;padding:14px 18px;
+border-radius:50px;text-decoration:none;font-weight:600}
+
+@media(max-width:700px){
+.hero h1{font-size:38px}
+header{padding:15px 20px}
+}
 </style>
 </head>
 
@@ -46,58 +98,89 @@ footer{text-align:center;padding:35px;background:#000;opacity:.7;font-size:14px}
 <a href="#gallery">Galereya</a>
 <a href="#reserve">Rezervasiya</a>
 <a href="#contact">Əlaqə</a>
-<a href="https://instagram.com/coffeeandcake._" target="_blank">Instagram</a>
 </nav>
 </header>
 
 <section class="hero">
 <h1>Coffee & Cake</h1>
-<p>Sabunçuda premium kafe təcrübəsi</p>
-<a class="btn" href="https://wa.me/994777117667">WhatsApp ilə sifariş</a>
+<p>Premium kafe təcrübəsi – Sabunçu, Bakı</p>
+<a class="btn" href="https://wa.me/994777117667">WhatsApp sifariş</a>
 </section>
 
 <section id="menu" class="section">
-<h2>Menyu</h2>
+<div class="section-title">Menyu</div>
 
 <div class="menu-category">
 <h3>Qəhvə</h3>
 <div class="menu-item"><span>Espresso</span><span>2.50 ₼</span></div>
+<div class="menu-item"><span>Espresso Double</span><span>3.50 ₼</span></div>
 <div class="menu-item"><span>Americano</span><span>4.00 ₼</span></div>
+<div class="menu-item"><span>Americano L</span><span>4.50 ₼</span></div>
 <div class="menu-item"><span>Cappuccino</span><span>4.50 ₼</span></div>
+<div class="menu-item"><span>Cappuccino Large</span><span>4.90 ₼</span></div>
 <div class="menu-item"><span>Latte</span><span>4.60 ₼</span></div>
+<div class="menu-item"><span>Latte Large</span><span>4.90 ₼</span></div>
 <div class="menu-item"><span>Flat White</span><span>5.20 ₼</span></div>
+<div class="menu-item"><span>Flat White Large</span><span>5.90 ₼</span></div>
+<div class="menu-item"><span>Coffee Mocha</span><span>5.80 ₼</span></div>
+<div class="menu-item"><span>Coffee Mocha Large</span><span>6.20 ₼</span></div>
+<div class="menu-item"><span>Raf Coffee</span><span>5.60 ₼</span></div>
+<div class="menu-item"><span>Raf Coffee Large</span><span>6.60 ₼</span></div>
+<div class="menu-item"><span>Cortado</span><span>5.00 ₼</span></div>
+<div class="menu-item"><span>Long Espresso</span><span>3.50 ₼</span></div>
+</div>
+
+<div class="menu-category">
+<h3>Non Coffee</h3>
+<div class="menu-item"><span>Chai Tea Latte</span><span>5.20 ₼</span></div>
+<div class="menu-item"><span>Hot Chocolate</span><span>5.20 ₼</span></div>
+<div class="menu-item"><span>Salep</span><span>5.20 ₼</span></div>
+<div class="menu-item"><span>Mojito</span><span>7.00 ₼</span></div>
+<div class="menu-item"><span>Cacao</span><span>3.50 ₼</span></div>
+<div class="menu-item"><span>Cacao L</span><span>4.30 ₼</span></div>
 </div>
 
 <div class="menu-category">
 <h3>Dessert</h3>
-<div class="menu-item"><span>San Sebastian</span><span>6.50 ₼</span></div>
+<div class="menu-item"><span>San Sebastian Çizkeyk</span><span>6.50 ₼</span></div>
 <div class="menu-item"><span>Tiramisu</span><span>6.70 ₼</span></div>
-<div class="menu-item"><span>Magnolia</span><span>6.70 ₼</span></div>
+<div class="menu-item"><span>Magnoliya</span><span>6.70 ₼</span></div>
+<div class="menu-item"><span>Ballı Tort</span><span>6.60 ₼</span></div>
 <div class="menu-item"><span>Brownie</span><span>6.80 ₼</span></div>
+<div class="menu-item"><span>Napoleon</span><span>6.60 ₼</span></div>
 </div>
 
 <div class="menu-category">
-<h3>Sərin İçkilər</h3>
+<h3>Iced Coffee</h3>
+<div class="menu-item"><span>Ice Americano</span><span>4.60 ₼</span></div>
 <div class="menu-item"><span>Ice Latte</span><span>5.00 ₼</span></div>
+<div class="menu-item"><span>Ice Raf</span><span>5.80 ₼</span></div>
 <div class="menu-item"><span>Ice Mocha</span><span>5.80 ₼</span></div>
-<div class="menu-item"><span>Limonad</span><span>6.00 ₼</span></div>
-<div class="menu-item"><span>Milkshake</span><span>6.50 ₼</span></div>
+</div>
+
+<div class="menu-category">
+<h3>Lemonades</h3>
+<div class="menu-item"><span>Strawberry Lemonade</span><span>6.00 ₼</span></div>
+<div class="menu-item"><span>Raspberry Lemonade</span><span>6.00 ₼</span></div>
+<div class="menu-item"><span>Mango Lemonade</span><span>6.00 ₼</span></div>
+<div class="menu-item"><span>Passion Fruit Lemonade</span><span>6.00 ₼</span></div>
 </div>
 
 </section>
 
 <section id="gallery" class="section">
-<h2>Galereya</h2>
+<div class="section-title">Galereya</div>
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
-<img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5">
-<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
 <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+<img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5">
 </div>
 </section>
 
 <section id="reserve" class="section">
-<h2>Rezervasiya</h2>
+<div class="section-title">Rezervasiya</div>
+<div class="reserve-box">
 <form action="https://formsubmit.co/coffeeandcake.az@gmail.com" method="POST">
 <input type="text" name="Ad" placeholder="Adınız" required>
 <input type="tel" name="Telefon" placeholder="Telefon" required>
@@ -105,20 +188,23 @@ footer{text-align:center;padding:35px;background:#000;opacity:.7;font-size:14px}
 <textarea name="Qeyd" placeholder="Qeyd"></textarea>
 <button type="submit">Rezervasiya göndər</button>
 </form>
+</div>
 </section>
 
 <section id="contact" class="section">
-<h2>Əlaqə və Məkan</h2>
-<p>Sabunçu rayonu, Səmədbəy Mehmandarov küçəsi 30, Bakı</p>
-<p>Tel: +994 77 711 76 67</p>
-<p>Hər gün: 08:00 – 23:30</p>
-
-<iframe src="https://www.google.com/maps?q=40.419305,49.965651&output=embed"></iframe>
+<div class="section-title">Məkan</div>
+<div class="map">
+<iframe width="100%" height="350" style="border:0"
+src="https://www.google.com/maps?q=40.419305,49.965651&output=embed">
+</iframe>
+</div>
 </section>
 
 <footer>
-© 2026 Coffee & Cake | @coffeeandcake._
+© 2026 Coffee & Cake
 </footer>
+
+<a class="whatsapp" href="https://wa.me/994777117667">WhatsApp</a>
 
 </body>
 </html>
